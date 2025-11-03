@@ -1,0 +1,7 @@
+import joblib
+
+# Load original large pickle
+model = joblib.load("large_model.pkl")
+
+# Save again with compression
+joblib.dump(model, "compressed_model.pkl", compress=3)
